@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 #import time as t
-#import re
+import re
 
 def job1():
   
@@ -428,11 +428,11 @@ df1
 
 
 a = weather
-#b = [x.lower() for x in a]
-#r = re.compile(".*rain|.*thunder|.*mist|.*showers")
-#newlist = list(filter(r.match, b)) # Read Note below
+b = [x.lower() for x in a]
+r = re.compile(".*rain|.*thunder|.*mist|.*showers")
+newlist = list(filter(r.match, b)) # Read Note below
  
-if len(a) > 0:
+if len(newlist) > 0:
   job1()
 else:
     'stop'
