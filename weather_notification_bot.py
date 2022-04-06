@@ -5,17 +5,10 @@ import pandas as pd
 #import re
 
 def job1():
-  # enter city name
-  #city = ["Bangkok","Chonburi","Rayong","Chiangmai","Khonkaen","Nakhorn ratchasima",
-   #       "Pathumthani","Nakhonpathom","Nonthaburi","Samutprakarn","Samutsakorn","Phuket"
-    #      ,"Songkla","Lopburi","Nakhon si thammarat","Ratchaburi","Buriram"
-     #     ,"Nakhonsawan","๊Udonthani","Chiangrai","Prachuap kririkan","Phitsanulok"
-      #    ,"Ubonratchatani","Lampang"]
-
+  
   city = ["Bangkok","Chonburi","Rayong","Chiangmai","Khonkaen","Nakhorn ratchasima",
         "Pathumthani","Nakhonpathom","Nonthaburi","Samutprakarn","Samutsakorn","Phuket","Songkla","Lopburi","Nakhon si thammarat"]
   # creating url and requests instance
-  #url = "https://www.google.com/search?q="+"weather"+city
 
   city_ = list()
   temp_ = list()
@@ -426,12 +419,6 @@ df1 = pd.DataFrame(zip(city_,temp_,time_,weather),columns=['city','temperature',
 df1
 
   
-  # printing all data
-  #print("City is", city[i])
-  #print("Temperature is", temp)
-  #print("Time: ", time)
-  #print("Sky Description: ", sky)
-  #print(other_data)
 
 
 
@@ -440,7 +427,6 @@ df1
 
 
 
-  #a = ['Thunderstrom','Heavy thunderstrom','Light and showers','Mist','Showers','Rain','Light rain','Few showers','Isolated thunderstorms','Scattered thunderstorms']
 a = weather
 #b = [x.lower() for x in a]
 #r = re.compile(".*rain|.*thunder|.*mist|.*showers")
@@ -448,7 +434,5 @@ a = weather
  
 if len(a) > 0:
   job1()
-    #t.sleep(600)
 else:
-    #t.sleep(600)
     'stop'
