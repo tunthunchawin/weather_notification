@@ -7,7 +7,7 @@ import re
 def job1():
   
   city = ["Bangkok","Chonburi","Rayong","Chiangmai","Khonkaen","Nakhorn ratchasima",
-        "Pathumthani","Nakhonpathom","Nonthaburi","Samutprakarn","Samutsakorn","Phuket","Songkla","Lopburi","Nakhon si thammarat"]
+        "Pathumthani","Nakhonpathom","Nonthaburi","Samutprakarn","Samutsakorn","Ratchaburi","Songkla","Lopburi","Nakhon si thammarat","Buriram"]
   # creating url and requests instance
 
   city_ = list()
@@ -85,6 +85,7 @@ def job1():
                    a12,b12,d12,
                    a13,b13,d13,
                    a14,b14,d14,
+                   a15,b15,d15,
                    file=None):
       import requests
       url = 'https://notify-api.line.me/api/notify'
@@ -119,7 +120,9 @@ def job1():
                                                                       '\n========================',
                                                                    '\n',a13,b13,d13,
                                                                       '\n========================',
-                                                                   '\n',a14,b14,d14]},files=file)
+                                                                   '\n',a14,b14,d14,
+                                                                  '\n========================',
+                                                                   '\n',a15,b15,d15]},files=file)
 
 
   
@@ -332,6 +335,19 @@ def job1():
       Weather14 = x.weather[14]
       #d = {'message':Weather}
       d14 = Weather14
+      
+      City15 = x.city[15]
+      #a = {'message':City}
+      a15 = City15
+      Temperature15 = x.temperature[15]
+      #b = {'message':Temperature}
+      b15 = Temperature15
+      Time15 = x.time[15]
+      #c = {'message':Time}
+      c15 = Time15
+      Weather15 = x.weather[15]
+      #d = {'message':Weather}
+      d15 = Weather15
 
 
       return __lineNotify(a,b,d,
@@ -348,7 +364,8 @@ def job1():
                         a11,b11,d11,
                         a12,b12,d12,
                         a13,b13,d13,
-                        a14,b14,d14)
+                        a14,b14,d14,
+                         a15,b15,d15)
 
 
 
@@ -375,7 +392,7 @@ def job1():
  
 # enter city name
 city = ["Bangkok","Chonburi","Rayong","Chiangmai","Khonkaen","Nakhorn ratchasima",
-        "Pathumthani","Nakhonpathom","Nonthaburi","Samutprakarn","Samutsakorn","Phuket","Songkla","Lopburi","Nakhon si thammarat"]
+        "Pathumthani","Nakhonpathom","Nonthaburi","Samutprakarn","Samutsakorn","Ratchaburi","Songkla","Lopburi","Nakhon si thammarat","Buriram"]
  
 # creating url and requests instance
 #url = "https://www.google.com/search?q="+"weather"+city
